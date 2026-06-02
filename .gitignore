@@ -1,0 +1,41 @@
+# Java/Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.tar.gz
+*.log
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Secrets and Config
+.env
+key-grupo5.json
+*.key
+*.pem
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+out/
+gen/
+
+# IDE - VS Code
+.vscode/
+.history/
+
+# IDE - Eclipse
+.settings/
+.project
+.classpath
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
