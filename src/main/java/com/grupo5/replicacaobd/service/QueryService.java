@@ -39,10 +39,18 @@ public class QueryService {
     public Map<String, Object> getRelatorioVendas() {
         List<Pedido> pedidos = pedidoRepository.findAll();
         Map<String, Object> relatorio = new HashMap<>();
-        relatorio.put("total_pedidos", pedidos.size());
-        relatorio.put("valor_total_vendas", pedidos.stream()
+        
+        java.math.BigDecimal valorTotal = pedidos.stream()
                 .map(Pedido::getValorTotal)
-                .reduce(java.math.BigDecimal.ZERO, java.math.BigDecimal::add));
+                .reduce(java.math.BigDecimal.ZERO, java.math.BigDecimal::add);
+        
+        java.math.BigDecimal valorMedio = pedidos.isEmpty() ? java.math.BigDecimal.ZERO : 
+                valorTotal.divide(java.math.BigDecimal.valueOf(pedidos.size()), 2, java.math.RoundingMode.HALF_UP);
+
+        relatorio.put("total_pedidos", pedidos.size());
+        relatorio.put("valor_total_vendas", valorTotal);
+        relatorio.put("valor_medio_pedidos", valorMedio);
+        
         return relatorio;
     }
 }

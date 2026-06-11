@@ -99,6 +99,7 @@ public class DataGeneratorService {
             Map<String, Object> relatorio = queryService.getRelatorioVendas();
             System.out.println("Relatório Agregado:");
             System.out.println("  - Quantidade total de pedidos: " + relatorio.get("total_pedidos"));
+            System.out.println("  - Valor médio dos pedidos: R$ " + relatorio.get("valor_medio_pedidos"));
             System.out.println("  - Valor total vendido: R$ " + relatorio.get("valor_total_vendas"));
         } catch (Exception e) {
             System.err.println("Erro ao realizar consultas na réplica: " + e.getMessage());
