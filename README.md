@@ -1,5 +1,14 @@
 # 📊 BDReplicável - Replicação de Banco de Dados com Separação de Leitura/Escrita
 
+## 👥 Integrantes do Grupo 5
+
+| Nome | Matrícula |
+|------|-----------|
+| Dan Benedetti | - |
+| Thiago Dias - |
+| Gustavo Moreira| - |
+| Wilton Monteiro| - |
+
 ## 📝 Descrição
 
 Este projeto implementa um padrão de **replicação de banco de dados com separação de leitura e escrita** (Read/Write Splitting), desenvolvido como trabalho acadêmico para demonstrar os conceitos de escalabilidade e performance em aplicações Java com Spring Boot.
@@ -553,13 +562,7 @@ Consulta 4: REPLICA_1
 
 ---
 
-## 👥 Integrantes do Grupo 5
 
-| Nome | Matrícula |
-|------|-----------|
-| Dan Benedetti | - |
-| - | - |
-| - | - |
 
 ---
 
