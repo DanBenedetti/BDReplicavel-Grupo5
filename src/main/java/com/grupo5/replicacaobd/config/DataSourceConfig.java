@@ -13,19 +13,19 @@ import java.util.Map;
 @Configuration
 public class DataSourceConfig {
 
-    @Value("${DB_PRIMARY_HOST:localhost}")
+    @Value("${db.primary.host}")
     private String primaryHost;
 
-    @Value("${DB_REPLICA_HOSTS:localhost}")
+    @Value("${db.replica.hosts}")
     private String replicaHosts;
 
-    @Value("${DB_USER:root}")
+    @Value("${db.username}")
     private String dbUser;
 
-    @Value("${DB_PASS:password}")
+    @Value("${db.password}")
     private String dbPass;
 
-    @Value("${DB_NAME:aula-db}")
+    @Value("${db.name}")
     private String dbName;
 
     @Bean
